@@ -5,6 +5,8 @@ const morgan = require("morgan");
 const hbs  = require('express-handlebars');
 const path = require("path");
 
+app.use(express.static(path.join(__dirname, 'public')))
+
 app.use(morgan('combined'));
 app.engine('hbs', hbs({
     extname: '.hbs'
